@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff, #e0e7ff);
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+.weather-app {
+  width: min(90%, 460px);
+  margin: 60px auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(30, 64, 175, 0.12);
+}
+
+.weather-app h1 {
+  margin-bottom: 8px;
+  font-size: 30px;
+  color: #1d4ed8;
+}
+
+.weather-app>p {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+  text-align: left;
+}
+
+.search-form label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.search-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-form button:hover {
+  background: #1d4ed8;
+}
+
+.search-form button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.weather-card {
+  margin-top: 28px;
+  padding: 24px 18px;
+  border-radius: 18px;
+  background: #eff6ff;
+}
+
+.weather-card h2 {
+  margin-top: 0;
+  font-size: 21px;
+}
+
+.weather-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-card h3 {
+  margin: 0;
+  font-size: 48px;
+  color: #1d4ed8;
+}
+
+.description {
+  text-transform: capitalize;
+  color: #475569;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid #dbeafe;
+}
+
+.weather-details p {
+  margin: 6px 0;
+}
+
+.error {
+  padding: 12px;
+  border-radius: 10px;
+  background: #fee2e2;
+  color: #b91c1c !important;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .weather-app {
+    margin: 24px auto;
+    padding: 22px;
+  }
+
+  .weather-app h1 {
+    font-size: 26px;
+  }
+
+  .weather-card h3 {
+    font-size: 40px;
+  }
+}
